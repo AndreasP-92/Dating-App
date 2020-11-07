@@ -8,8 +8,38 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class EndPoints {
 
     @GetMapping("/")
-    public String frontPage(){
+    public String index(){
 
         return "index";
+    }
+
+    @GetMapping("/kontakt")
+    public String Kontakt(){
+
+        return "kontakt";
+    }
+
+    @GetMapping("/admin")
+    public String admin(){
+
+        return "admin";
+    }
+
+    @GetMapping("/login")
+    public String login(){
+
+        return "login";
+    }
+
+    @GetMapping("/register")
+    public String register(){
+
+        return "register";
+    }
+
+    @GetMapping("/match")
+    public String match(){
+
+        return "match";
     }
 }
