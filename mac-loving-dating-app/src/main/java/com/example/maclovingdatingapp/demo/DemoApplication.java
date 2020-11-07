@@ -1,4 +1,4 @@
-package com.maclovingdatingapp.demo;
+package com.example.maclovingdatingapp.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
