@@ -2,7 +2,6 @@ package com.example.maclovingdatingapp.demo.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class EndPoints {
@@ -19,10 +18,37 @@ public class EndPoints {
         return "kontakt";
     }
 
+//    ADMIN ========================
+//INDEX
     @GetMapping("/admin")
     public String admin(){
 
-        return "admin";
+        return "/admin/adminIndex";
+    }
+//    SUPPORT
+    @GetMapping("/admin/support")
+    public String adminSupport(){
+
+        return "/admin/adminSupport";
+    }
+//    OPRET BRUGER
+    @GetMapping("/admin/opretbruger")
+    public String adminOprebruger(){
+
+        return "/admin/adminOpretbruger";
+    }
+//    SE BRUGERE
+    @GetMapping("/admin/sebrugere")
+    public String adminSebrugere(){
+
+        return "/admin/adminSebrugere";
+    }
+//    CHAT
+
+    @GetMapping("/admin/support/chat")
+    public String adminChat(){
+
+        return "/admin/adminChat";
     }
 
     @GetMapping("/login")
