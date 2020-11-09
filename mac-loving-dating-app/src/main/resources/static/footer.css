@@ -1,8 +1,20 @@
-.body {
-    text-align: center;
-    color: #212529;
-    font-weight: 400;
-    line-height: 2.5;
-    font-size: 1rem;
-
-}
+/*.container{*/
+/*    text-align: center;*/
+/*    color: #212529;*/
+/*    font-weight: 400;*/
+/*    line-height: 2.5;*/
+/*    font-size: 1rem;*/
+/*}*/
+/*.col-sm{*/
+/*    max-width: 10%;*/
+/*    flex-grow: 0;*/
+/*    flex-basis: 0;*/
+/*}*/
+/*.row{*/
+/*    display: -ms-flexbox;*/
+/*    display: flex;*/
+/*    -ms-flex-wrap: wrap;*/
+/*    flex-wrap: wrap;*/
+/*    margin-right: -500px;*/
+/*    margin-left: 400px;*/
+/*}*/
