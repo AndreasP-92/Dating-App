@@ -68,4 +68,15 @@ public class EndPoints {
 
         return "match";
     }
+
+    @GetMapping("/faq")
+    public String faq(){
+
+        return "faq";
+    }
+    @GetMapping("/privat")
+    public String privat(){
+
+        return "privat";
+    }
 }
