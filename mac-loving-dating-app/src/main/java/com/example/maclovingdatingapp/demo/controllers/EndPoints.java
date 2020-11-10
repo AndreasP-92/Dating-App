@@ -57,10 +57,10 @@ public class EndPoints {
         return "login";
     }
 
-    @GetMapping("/register")
-    public String register(){
+    @GetMapping("/opretprofil")
+    public String registrer(){
 
-        return "register";
+        return "registrer";
     }
 
     @GetMapping("/match")
