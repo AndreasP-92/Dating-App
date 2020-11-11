@@ -74,9 +74,9 @@ public class EndPoints {
 
         return "faq";
     }
-    @GetMapping("/privat")
-    public String privat(){
+    @GetMapping("/privatliv")
+    public String privatliv(){
 
-        return "privat";
+        return "privatliv";
     }
 }
