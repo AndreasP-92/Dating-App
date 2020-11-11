@@ -1,0 +1,66 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #2196f3 !important;
+}
+
+.brand_logo{
+    width:60%;
+}
+
+.propic{
+
+    width:10%;
+}
+
+.advertise{
+    width:auto;
+    margin-left:5px;
+}
+.advertise1{
+    width:auto;
+    height:auto;
+}
+
+#butt{
+    background-color: #c0392b;
+    color: white;
+    min-width: 135px;
+    max-width: 135px;
+
+}
+
+.spacer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.spacer1 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#lowmid{
+    background-color:#ffdddd;
+    padding-bottom: 251px;
+    padding-top:49px;
+}
+
+#lowmid2{
+    background-color:#c0392b;
+    padding-bottom: 368px;
+    padding-top:49px;
+}
+
+.col-sm-7 {
+    width: 66.68%;
+    margin-left:253px;
+}
+
+.row.content {height: 450px}
+
+.sidenav {
+    padding-top: 2px;
+    background-color: #2196f3;
+    height: 100%;
+}

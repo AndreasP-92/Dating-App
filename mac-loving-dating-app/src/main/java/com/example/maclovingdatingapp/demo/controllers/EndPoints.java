@@ -79,4 +79,8 @@ public class EndPoints {
 
         return "privatliv";
     }
+    @GetMapping("/profil")
+    public String profil(){
+        return "profil";
+    }
 }
