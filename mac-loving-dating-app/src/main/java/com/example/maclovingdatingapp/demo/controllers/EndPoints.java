@@ -57,15 +57,30 @@ public class EndPoints {
         return "login";
     }
 
-    @GetMapping("/register")
-    public String register(){
+    @GetMapping("/opretprofil")
+    public String registrer(){
 
-        return "register";
+        return "registrer";
     }
 
     @GetMapping("/match")
     public String match(){
 
         return "match";
+    }
+
+    @GetMapping("/faq")
+    public String faq(){
+
+        return "faq";
+    }
+    @GetMapping("/privatliv")
+    public String privatliv(){
+
+        return "privatliv";
+    }
+    @GetMapping("/profil")
+    public String profil(){
+        return "profil";
     }
 }
