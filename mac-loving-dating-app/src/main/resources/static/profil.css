@@ -1,75 +1,85 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #2196f3 !important;
+body {font-family: Arial, Helvetica, sans-serif;
+    background: #ffdddd !important;
+}
+* {box-sizing: border-box;}
+
+.box .heading{
+    background: #c0392b !important;
+    border-radius: 7px 7px 0px 0px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: "Rubik";
 }
 
-.brand_logo{
-    width:60%;
+.faqs {
+    padding: 0px 20px 20px;
 }
 
-.propic{
-
-    width:10%;
-}
-.profilep{
-    width:150px;
-    height:220px;
-    margin-left:200px;
-}
-.advertise{
-    width:auto;
-    margin-left:5px;
-}
-.advertise1{
-    width:auto;
-    height:auto;
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #2196f3 !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
-#butt{
-    background-color: #c0392b;
+input[type=submit] {
+    background-color: #4CAF50;
     color: white;
-    min-width: 135px;
-    max-width: 135px;
-
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.spacer {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.spacer1 {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-#lowmid{
-    background-color:#ffdddd;
-    padding-bottom: 251px;
-    padding-top:49px;
+input[type=submit]:hover {
+    background-color: #45a049;
 }
 
-#lowmid2{
-    background-color:#c0392b;
-    padding-bottom: 368px;
-    padding-top:49px;
-}
-
-.col-sm-7 {
-    width: 66.68%;
-    margin-left:253px;
-}
-
-.row.content {height: 450px}
-
-.sidenav {
-    padding-top: 2px;
+.container {
+    border-radius: 5px;
     background-color: #2196f3;
-    height: 100%;
+    padding: 20px;
 }
 
-.navbar{
-    background-color:#c0392b;
-    margin-bottom:0px;
+
+.brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #ffbdbd;
+    padding: 10px;
+    text-align: center;
+}
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.form_container {
+    margin-top: 100px;
+}
+.user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #2196f3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
 }
