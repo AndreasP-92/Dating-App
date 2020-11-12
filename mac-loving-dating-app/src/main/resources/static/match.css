@@ -1,77 +1,5 @@
-#butt{
-    background-color: #c0392b;
-    color: black;
-    min-width: 135px;
-    max-width: 135px;
-}
-
-#butt1{
-    background-color: #c0392b;
-    color: black;
-    min-width: 135px;
-    max-width: 135px;
-    margin-left:-936px;
-}
-body {font-family: Arial, Helvetica, sans-serif;
-    background: #2196f3 !important;
-}
-* {box-sizing: border-box;}
-
-.box .heading {
-    background: #c0392b;
-    border-radius: 7px 7px 0px 0px;
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-    font-family: "Rubik";
-    margin: -57px;
-}
-.box .heading1 {
-    background: #c0392b;
-    border-radius: 7px 7px 0px 0px;
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-    font-family: "Rubik";
-}
-
-.faqs {
-    padding: 0px 20px 20px;
-}
-
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #2196f3;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.container {
-    border-radius: 5px;
-    background-color: #ffbdbd;
-    padding: 20px;
-}
-
-
 .brand_logo_container {
-    position: absolute;
+
     height: 170px;
     width: 170px;
     top: -75px;
@@ -86,18 +14,17 @@ input[type=submit]:hover {
     border-radius: 50%;
     border: 2px solid white;
 }
-.form_container {
-    margin-top: 100px;
-}
 
 .heading{
-    width: 50%;
+    width: 40%;
     display: inline-block;
+    background-color:#c0392b;
+    margin-top:30px;
+    padding:20px;
 }
-.heading1{
-    width: 50%;
-    display: inline-block;
+.nav-link active{
+    color:black;
 }
-.container mt-5{
-    margin-top:-0rem;
+.nav-link{
+    color:black;
 }
