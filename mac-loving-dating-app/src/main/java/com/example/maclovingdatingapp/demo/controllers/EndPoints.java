@@ -81,6 +81,6 @@ public class EndPoints {
     }
     @GetMapping("/profil")
     public String profil(){
-        return "profil";
+        return "profile";
     }
 }
