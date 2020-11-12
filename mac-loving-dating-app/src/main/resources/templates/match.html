@@ -3,12 +3,70 @@
 <html xmlns:th ="http://www.thymeleaf.org"></html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="match.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
 
     <title>Title</title>
 </head>
 <body>
+<div class="box" align="center">
 
+    <div class="container">
+        <form action="/action_page.php">
+            <div class="col-sm" align="center">
+                <img srcset="https://cdn.pixabay.com/photo/2020/04/17/07/52/flower-5053686_1280.png 1.778x" src="https://cdn.pixabay.com/photo/2020/04/17/07/52/flower-5053686_960_720.png" class ="brand_logo" alt="logo">
+            </div>
+            <div class="d-flex justify-content-center mt-3 match_container">
+                <button1 type="button" name="button2" class="btn match_btn" id="butt1">Søg</button1>
+            </div>
+            <div class = "spacer1">
+            </div>
+            <div class="d-flex justify-content-center mt-3 message_container">
+                <button2 type="button" name="button3" class="btn message_btn" id="butt1">Match</button2>
+            </div>
+            <div class = "spacer1">
+            </div>
+            <div class="d-flex justify-content-center mt-3 edit_container">
+                <button3 type="button" name="button4" class="btn edit_btn" id="butt1">Besked</button3>
+            </div>
+            <div class="d-flex justify-content-center mt-3 match_container">
+                <button4 type="button" name="button2" class="btn match_btn" id="butt1">Rediger Profil</button4>
+            </div>
+            <p1 class="heading1">Dit Top Match</p1>
+            <div class = "spacer1">
+            </div>
+            <img srcset="https://expertphotography.com/wp-content/uploads/2018/10/cool-profile-picture-natural-light.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" class ="brand_logo" alt="logo" style="width: 230px; height: 275px; margin: 10px;">
+            <div class = "spacer1">
+            </div>
+
+        </form>
+    </div>
+
+    <div class="container m-0 p-0">
+        <p class="heading">Dine Matches</p>
+        <div class="container mt-5" align="center">
+            <div class="row w-50"  >
+                <div class="col-sm" align="center">
+                    <img alt="logo" class="brand_logo" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2019/10/Renee-M.jpg?fit=753%2C1024&amp;ssl=1" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 275px; margin: 0px;">
+                    <p></p>
+                </div>
+                <div class="col-sm" align="center">
+                    <img alt="logo" class="brand_logo" src="https://perfectczechwomen.com/wp-content/uploads/2019/04/New-Profile-15-500x580.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 275px; margin: 0px;">
+                </div>
+                <div class="col-sm" align="center">
+                    <img alt="logo" class="brand_logo" src="https://denverjewishchamber.com/wp-content/uploads/2018/10/business-woman-profile-picture-6-e1539213049252.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 275px; margin: 0px;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<footer>
+
+    <div th:replace="footer :: footerFragment"></div>
+
+</footer>
 </body>
 </html>
