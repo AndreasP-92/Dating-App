@@ -1,5 +1,6 @@
 package com.example.dating_app02.service;
 
+import com.example.dating_app02.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -25,6 +26,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     DataSource dataSource;
+
+    @Autowired
+    UsersDAO usersDAO;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -58,11 +62,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .successHandler(new AuthenticationSuccessHandler() {
                         @Override
                         public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
-                                String name = authentication.getName();
-                                System.out.println("Logged in user: " + name);
+                            String name = authentication.getName();
+                            System.out.println("Logged in user: " + name);
+
+                            int id = usersDAO.getUser(name).getUser_id();
+
+                            System.out.println(usersDAO.getUser(name).getUser_id());
+
+                            String url = "/profile/"+id;
 
 
-                                httpServletResponse.sendRedirect("/profile");
+                            httpServletResponse.sendRedirect(url);
                         }
                     })
                     .failureHandler(new AuthenticationFailureHandler() {

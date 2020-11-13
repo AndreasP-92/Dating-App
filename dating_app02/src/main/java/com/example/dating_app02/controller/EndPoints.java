@@ -25,12 +25,16 @@ public class EndPoints {
         return "main/index";
     }
 
-//    LOGIN =======================================
-    @GetMapping("/user")
-    public String user(){
+    @GetMapping("/profile/{id}")
+    public ModelAndView profile(@PathVariable(name = "id") int id){
+        ModelAndView mav = new ModelAndView("user/profile");
+        Profile profile = daoProfile.get(id);
+        mav.addObject("profile", profile);
 
-        return "user/user";
+        return mav;
     }
+
+//    LOGIN =======================================
 
     @GetMapping("/admin")
     @ResponseBody
@@ -51,15 +55,9 @@ public class EndPoints {
         return "log/login";
     }
 
-    @GetMapping("/profile/{id}")
-    public ModelAndView profile(@PathVariable(name = "id") int id){
-        ModelAndView mav = new ModelAndView("user/profile");
-        Profile profile = daoProfile.get(id);
-        mav.addObject("profile", profile);
 
-        return mav;
 
-    }
+
 //    USER ==============================
 
 

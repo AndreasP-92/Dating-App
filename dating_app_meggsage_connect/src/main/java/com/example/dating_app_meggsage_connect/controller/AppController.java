@@ -47,6 +47,7 @@ public class AppController {
 
     @RequestMapping("/edit/{id}")
     public ModelAndView showEditForm(@PathVariable(name = "id") int id){
+        System.out.println(id);
         ModelAndView mav = new ModelAndView("edit_form");
         Msg msg = dao.get(id);
         mav.addObject("msg", msg);

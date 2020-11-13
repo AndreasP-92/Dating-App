@@ -32,6 +32,15 @@ public class UsersDAO {
         return listUser;
     }
 
+    public User getUser(String user_mail){
+        String sql = "SELECT * FROM app_user WHERE user_mail = ?";
+        Object[] args = {user_mail};
+        User user = jdbcTemplate.queryForObject(sql, args,
+                BeanPropertyRowMapper.newInstance(User.class));
+
+        return user;
+    }
+
     public void saveUser (User user){
         SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
 
