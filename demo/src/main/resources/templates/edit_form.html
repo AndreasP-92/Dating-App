@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+</head>
+<body>
+<div align="center">
+    <h1>Edit Profile</h1>
+    <Br/>
+
+    <form action="#" th:action="@{/update}" th:object="${profile}" method="post">
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>ID</td>
+                <td><input type="text" th:field="*{profile_id}" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td>Firstname</td>
+                <td><input type="text" th:field="*{profile_firstname}"></td>
+            </tr>
+            <tr>
+                <td>Lastname</td>
+                <td><input type="text" th:field="*{profile_lastname}"></td>
+            </tr>
+            <tr>
+                <td>desc</td>
+                <td><textarea rows="4" cols="50" type="text" th:field="*{profile_desc}"></textarea></td>
+            </tr>
+            <tr>
+                <td>img</td>
+                <td><input type="file" th:field="*{profile_img}"></td>
+            </tr>
+            <tr>
+                <td>matchTag</td>
+                <td><input type="text" th:field="*{profile_matchTag}"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+
+        </table>
+    </form>
+
+</div>
+</body>
+</html>
