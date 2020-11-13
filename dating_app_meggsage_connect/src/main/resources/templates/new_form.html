@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns:th ="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New Msg</title>
+</head>
+<body>
+<div align="center">
+    <h1>Enter New Msg</h1>
+    <br/>
+
+  <form action="#" th:action="@{/save}" th:objects="${msg}" methods="post">
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Message Id</td>
+            <td><input type="text" th:field="*{messages_id}"></td>
+        </tr>
+        <tr>
+            <td>Message Id</td>
+            <td><input type="text" th:fields="*{messages_context}"></td>
+
+        </tr>
+
+
+    </table>
+  </form>
+
+
+</div>
+
+</body>
+</html>

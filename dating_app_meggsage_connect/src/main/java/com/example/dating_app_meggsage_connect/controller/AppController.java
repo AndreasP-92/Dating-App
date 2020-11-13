@@ -24,4 +24,14 @@ public class AppController {
         return "index";
     }
 
+<<<<<<< Updated upstream
+=======
+    @RequestMapping("/new")
+    public String showNewForm(Model model) {
+        Msg msg = new Msg();
+        model.addAttribute("msg", msg);
+        return "new_form";
+    }
+    
+>>>>>>> Stashed changes
 }
