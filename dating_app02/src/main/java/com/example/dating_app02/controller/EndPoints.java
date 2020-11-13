@@ -3,14 +3,22 @@ package com.example.dating_app02.controller;
 import com.example.dating_app02.model.Authorities;
 import com.example.dating_app02.model.Profile;
 import com.example.dating_app02.model.User;
+import com.example.dating_app02.service.ProfileDAO;
 import com.example.dating_app02.service.UsersDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class EndPoints {
+    //@AUTOWIRED =========================
+    @Autowired
+    private UsersDAO daoUser;
+    @Autowired
+    private ProfileDAO daoProfile;
+
     @GetMapping("/")
     public String home(){
 
@@ -43,15 +51,18 @@ public class EndPoints {
         return "log/login";
     }
 
-    @GetMapping("/profile")
-    public String profile(){
+    @GetMapping("/profile/{id}")
+    public ModelAndView profile(@PathVariable(name = "id") int id){
+        ModelAndView mav = new ModelAndView("user/profile");
+        Profile profile = daoProfile.get(id);
+        mav.addObject("profile", profile);
 
-        return "user/profile02";
+        return mav;
+
     }
 //    USER ==============================
 
-    @Autowired
-    private UsersDAO daoUser;
+
 
     @GetMapping("/opretbruger")
     public String registrer(Model model){
@@ -74,12 +85,24 @@ public class EndPoints {
 
 //   PROFIL ===========================
 
+
+
 @RequestMapping("/opretprofil")
-    public String createProfil(Model model) {
+    public String createProfile(Model model) {
         Profile profile = new Profile();
         model.addAttribute("profile",profile);
-        return "main/createProfil";
+        return "main/createProfile";
 }
+    @RequestMapping(value = "/saveprofile", method = RequestMethod.POST)
+    public String saveProfile(@ModelAttribute("profile") Profile profile){
+//        System.out.println(user);
+
+        daoProfile.save(profile);
+
+
+        return "redirect:/";
+    }
+
 //    @GetMapping("/login_success")
 //    public String loginSuccess(){
 //
