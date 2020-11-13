@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Manager Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>User Records</h1>
+    <a href="/new">Enter New User</a>
+    <br><br/>
+    <table border="1" callpadding="10">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>User Mail</th>
+                <th>User Password</th>
+                <th>User Phone</th>
+                <th>User Date</th>
+                <th>User Active</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${listUser}">
+                <td th:text="${user.user_id}">ID</td>
+                <td th:text="${user.user_mail}">User Mail</td>
+                <td th:text="${user.user_password}">User Password</td>
+                <td th:text="${user.user_phone}">User Phone</td>
+                <td th:text="${user.user_date}">User Date</td>
+                <td th:text="${user.active}">User Active</td>
+                <td>
+                    <a th:href="@{'/edit/' + ${user.user_id}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/delete/' + ${user.user_id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

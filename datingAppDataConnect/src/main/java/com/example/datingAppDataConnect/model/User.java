@@ -1,7 +1,7 @@
 package com.example.datingAppDataConnect.model;
 
 public class User {
-    private int     id;
+    private int     user_id;
     private String  user_mail;
     private String  user_password;
     private int     user_phone;
@@ -9,19 +9,19 @@ public class User {
     private int     active;
 
     public User(String user_mail, String user_password, int user_phone, String user_date, int active) {
-        this.user_mail = user_mail;
-        this.user_password = user_password;
-        this.user_phone = user_phone;
-        this.user_date = user_date;
-        this.active = active;
+        this.user_mail      = user_mail;
+        this.user_password  = user_password;
+        this.user_phone     = user_phone;
+        this.user_date      = user_date;
+        this.active         = active;
     }
 
     public User() {
 
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public void setUser_mail(String user_mail) {
@@ -44,8 +44,8 @@ public class User {
         this.active = active;
     }
 
-    public int getId() {
-        return id;
+    public int getUser_id() {
+        return user_id;
     }
 
     public String getUser_mail() {
@@ -70,12 +70,12 @@ public class User {
 
     @Override
     public String toString() {
-        return "Users{" +
-                "id=" + id +
+        return "User{" +
+                "user_id=" + user_id +
                 ", user_mail='" + user_mail + '\'' +
                 ", user_password='" + user_password + '\'' +
                 ", user_phone=" + user_phone +
-                ", user_date=" + user_date +
+                ", user_date='" + user_date + '\'' +
                 ", active=" + active +
                 '}';
     }
