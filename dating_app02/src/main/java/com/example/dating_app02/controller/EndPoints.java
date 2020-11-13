@@ -55,15 +55,22 @@ public class EndPoints {
         return "new_form";
     }
 
-    @GetMapping("/opretprofil")
-    public String registrer(Model model){
+    @GetMapping("/opretbruger")
+    public String createUser(Model model){
 
         User user = new User();
         model.addAttribute("user", user);
 
         return "user/createUser";
     }
+//        PROFIL ===========================
 
+    @RequestMapping("/opretprofil")
+    public String createProfil(Model model) {
+        com.example.demo.model.Profile profile = new com.example.demo.model.Profile();
+        model.addAttribute("profile",profile);
+        return "main/createProfil";
+    }
 //    @GetMapping("/login_success")
 //    public String loginSuccess(){
 //
