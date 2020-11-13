@@ -4,6 +4,8 @@ import com.example.dating_app_meggsage_connect.model.Msg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -28,8 +30,17 @@ public class MsgDAO {
         return listMsg;
     }
 
-    public void save(Msg message){
+    public void save(Msg msg){
+        SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
 
+        insertActor.withTableName("app_messages").usingColumns(
+                "messages_context"
+                ,   "messages_userId"
+                ,   "messages_date"
+        );
+        BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(msg);
+
+        insertActor.execute(param);
     }
 
     public Msg get(int id){

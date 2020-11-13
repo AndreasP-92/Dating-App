@@ -35,7 +35,7 @@ public class UsersDAOTest {
 
     @Test
     void testSave() {
-        User user = new User("tobia22s@gmail.com", "1234", 2222, "11-12-2020", 1);
+        User user = new User("tobia22s@gmail.com", "1234", 2222, "11-12-2020",0, 1);
         dao.saveUser(user);
     }
 }

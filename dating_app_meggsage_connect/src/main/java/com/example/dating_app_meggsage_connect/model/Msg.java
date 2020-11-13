@@ -6,14 +6,14 @@ public class Msg {
     private int messages_userId;
     private String messages_date;
 
-    public Msg(){
-
-    }
-
     public Msg(String messages_context, int messages_userId, String messages_date) {
         this.messages_context = messages_context;
         this.messages_userId = messages_userId;
         this.messages_date = messages_date;
+    }
+
+    public Msg(){
+
     }
 
     public void setMessages_id(int messages_id) {

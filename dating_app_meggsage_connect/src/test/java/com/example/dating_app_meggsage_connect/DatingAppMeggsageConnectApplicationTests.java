@@ -32,4 +32,10 @@ class DatingAppMeggsageConnectApplicationTests {
         System.out.println(listMsg);
     }
 
+    @Test
+    void testSave() {
+        Msg msg = new Msg("asdasd", 22, "22-22-2020");
+        dao.save(msg);
+    }
+
 }
