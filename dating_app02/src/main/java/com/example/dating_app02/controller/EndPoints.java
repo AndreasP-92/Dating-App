@@ -3,6 +3,7 @@ package com.example.dating_app02.controller;
 import com.example.dating_app02.model.Authorities;
 import com.example.dating_app02.model.Profile;
 import com.example.dating_app02.model.User;
+import com.example.dating_app02.service.ProfileDAO;
 import com.example.dating_app02.service.UsersDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -74,12 +75,24 @@ public class EndPoints {
 
 //   PROFIL ===========================
 
+    @Autowired
+    private ProfileDAO daoProfile;
+
 @RequestMapping("/opretprofil")
     public String createProfile(Model model) {
         Profile profile = new Profile();
         model.addAttribute("profile",profile);
         return "main/createProfile";
 }
+    @RequestMapping(value = "/saveprofile", method = RequestMethod.POST)
+    public String saveProfile(@ModelAttribute("profile") Profile profile){
+//        System.out.println(user);
+
+        daoProfile.save(profile);
+
+
+        return "redirect:/";
+    }
 //    @GetMapping("/login_success")
 //    public String loginSuccess(){
 //
