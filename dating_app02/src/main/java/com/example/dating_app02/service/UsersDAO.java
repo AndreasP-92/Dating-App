@@ -43,6 +43,7 @@ public class UsersDAO {
                 ,   "user_phone"
                 ,   "user_date"
                 ,   "active"
+                ,   "user_enabled"
         );
         BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(user);
 
@@ -81,7 +82,7 @@ public class UsersDAO {
 //                "user_date = : user_date, " +
 //                "active = : active, " +
 //                "WHERE user_id = : user_id";
-        String sql ="UPDATE app_user SET user_password = :user_password, user_phone = :user_phone, user_date = :user_date, active = :active WHERE user_id = :user_id";
+        String sql ="UPDATE app_user SET user_password = :user_password, user_phone = :user_phone, user_date = :user_date, active = :active user_enabled = :user_enabled WHERE user_id = :user_id";
 
 //        System.out.println(user);
 //        System.out.println("SQL===="+sql);

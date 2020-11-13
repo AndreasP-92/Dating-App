@@ -29,6 +29,7 @@ public class AppController {
     @RequestMapping("/new")
     public String showNewForm(Model model){
         User user = new User();
+        System.out.println(user);
         model.addAttribute("user", user);
 
         return "new_form";
