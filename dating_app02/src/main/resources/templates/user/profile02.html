@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="/profile.css" type="text/css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Profil Side !NAVN! </title>
+</head>
+<body style="background-color:#2196f3;">
+<div class="">
+    <div class="row">
+        <div class="col-sm-2 p-1" style="background-color:#2196f3;">
+            <div class="brand_logo_container mt-2 ml-4 mb-2">
+                <img class="brand_logo" th:src="@{/images/logo.jpg}"/>
+            </div>
+            <ul class="nav flex-column pt 5mt-5" align="center">
+                <li class="nav-item btn-danger mt-2">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item btn-danger mt-2">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item btn-danger mt-2">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item btn-danger mt-2">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-8 pb-5" style="background-color: #ffbdbd;">
+            <!--                PFOFILE         -->
+            <div class="container">
+                <!--                    IMAGE + INFO -->
+                <div class="container pt-5">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img class="img-thumbnail rounded-circle" data-holder-rendered="true" th:src="@{/images/image_01.jpg}"/>
+                        </div>
+                        <div class="col-sm">
+                            <h4>Navn : Andreas</h4>
+                            <h4>År : 28</h4>
+                            <h4>By : Ballerup</h4>
+                            <h4>Interesser : Gaming, Film, Dyr, Rejser</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--       PROFILE DESC     -->
+            <div class="container mt-5">
+                <div class="col-sm-12">
+                    <p>
+                        Om Mig:
+                        Jeg elsker smukke, selvsikre og sexede kvinder, der har det godt med at være feminine.
+                        Du er  dødlækker,  smuk, sund, selvsikker, optimistisk, seksuelt åben, fleksibel, intelligent, ærlig, udadvendt, sjov, god kommunikator (mit liv er en drama fri zone), forstår mænd, kærlig, sexet, glad og meget feminin. Min ideelle kvinde er mellem  xxx og xxx cm høj, slank og i god form med en dejlig krop, langt og lige brunt, eller sort hår, mørke øjne og lækker brun hud. Sundhed, motion og en sund kost er en stor del af hendes liv.
+
+                    </p>
+                </div>
+                <!--         PROFILE IMAGE(s)    -->
+                <div class="col-sm-12 mt-5">
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                        </div>
+                    </div>
+                </div>
+                <!--         PROFILE IMAGE(s)2    -->
+                <div class="col-sm-12 mt-2">
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div th:replace="footer :: footerFragment"></div>
+
+        </div>
+        <div class="col-sm-2">
+            <div class="container" style="background-color: #2196f3;">
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

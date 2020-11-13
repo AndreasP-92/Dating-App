@@ -33,4 +33,37 @@ public class UsersDAOTest {
 
         System.out.println(listSale);
     }
+
+    @Test
+    void testSave() {
+        User user = new User("tobias@gmail.com", "1234", 2222, "11-12-2020", 1);
+        dao.save(user);
+    }
+
+    @Test
+    void testGet() {
+        int id = 2;
+        User user = dao.get(id);
+
+        assertNotNull(user);
+    }
+
+    @Test
+    void testUpdate() {
+        User user = new User();
+        user.setUser_id(2);
+        user.setUser_password("test");
+        user.setUser_phone(333);
+        user.setUser_date("date test");
+        user.setActive(1);
+
+        System.out.println(user);
+        dao.update(user);
+    }
+
+    @Test
+    void testDelete() {
+        int id = 7;
+        dao.delete(id);
+    }
 }

@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeResource {
 
     @GetMapping("/")
-    @ResponseBody
     public String home(){
 
-        return ("<h1>Welcome</h1>");
+        return "index";
     }
 
     @GetMapping("/user")
