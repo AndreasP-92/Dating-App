@@ -9,9 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class EndPoints {
+    //@AUTOWIRED =========================
+    @Autowired
+    private UsersDAO daoUser;
+    @Autowired
+    private ProfileDAO daoProfile;
+
     @GetMapping("/")
     public String home(){
 
@@ -44,15 +51,18 @@ public class EndPoints {
         return "log/login";
     }
 
-    @GetMapping("/profile")
-    public String profile(){
+    @GetMapping("/profile/:id")
+    public ModelAndView profile(@PathVariable(name = "id") int id){
+        ModelAndView mav = new ModelAndView("user/profile02");
+        Profile profile = daoProfile.get(id);
+        mav.addObject("profile", profile);
 
-        return "user/profile02";
+        return mav;
+
     }
 //    USER ==============================
 
-    @Autowired
-    private UsersDAO daoUser;
+
 
     @GetMapping("/opretbruger")
     public String registrer(Model model){
@@ -75,8 +85,7 @@ public class EndPoints {
 
 //   PROFIL ===========================
 
-    @Autowired
-    private ProfileDAO daoProfile;
+
 
 @RequestMapping("/opretprofil")
     public String createProfile(Model model) {
@@ -93,6 +102,7 @@ public class EndPoints {
 
         return "redirect:/";
     }
+
 //    @GetMapping("/login_success")
 //    public String loginSuccess(){
 //

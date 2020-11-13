@@ -29,7 +29,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-8 pb-5" style="background-color: #ffbdbd;">
+            <div th:object="${profile}" class="col-sm-8 pb-5" style="background-color: #ffbdbd;">
 <!--                PFOFILE         -->
                 <div class="container">
 <!--                    IMAGE + INFO -->
@@ -39,7 +39,7 @@
                                 <img class="img-thumbnail rounded-circle" data-holder-rendered="true" th:src="@{/images/image_01.jpg}"/>
                             </div>
                             <div class="col-sm">
-                                <h4>Navn : Andreas</h4>
+                                <h4 th:field="*{profile_firstname}"></h4>
                                 <h4>År : 28</h4>
                                 <h4>By : Ballerup</h4>
                                 <h4>Interesser : Gaming, Film, Dyr, Rejser</h4>
