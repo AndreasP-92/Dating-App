@@ -75,10 +75,10 @@ public class EndPoints {
 //   PROFIL ===========================
 
 @RequestMapping("/opretprofil")
-    public String createProfil(Model model) {
+    public String createProfile(Model model) {
         Profile profile = new Profile();
         model.addAttribute("profile",profile);
-        return "main/createProfil";
+        return "main/createProfile";
 }
 //    @GetMapping("/login_success")
 //    public String loginSuccess(){

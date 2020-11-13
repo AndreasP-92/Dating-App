@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37fd1c1d-ecb3-44ff-8bff-df03d50e8baf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mac-loving-dating-app/src/main/resources/templates/profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/mac-loving-dating-app/src/main/resources/templates/profil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dating_app02/src/main/java/com/example/dating_app02/controller/EndPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/dating_app02/src/main/java/com/example/dating_app02/controller/EndPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dating_app02/src/test/java/com/example/dating_app02/ProfileDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dating_app02/src/test/java/com/example/dating_app02/ProfileDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,7 @@
       <workItem from="1605124898683" duration="13000" />
       <workItem from="1605125401052" duration="44000" />
       <workItem from="1605128653001" duration="153000" />
+      <workItem from="1605266693441" duration="11000" />
     </task>
     <servers />
   </component>
@@ -71,6 +72,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="227" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604849279698">
