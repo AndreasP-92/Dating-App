@@ -2,6 +2,7 @@ package com.example.dating_app02.controller;
 
 import com.example.dating_app02.model.User;
 import com.example.dating_app02.service.UsersDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -47,17 +48,10 @@ public class EndPoints {
     }
 //    USER ==============================
 
-    private UsersDAO daoUser;
+    @Autowired
+    private UsersDAO dao;
 
-    @RequestMapping("/opret")
-    public String showNewForm(Model model){
-        User user = new User();
-        model.addAttribute("user", user);
-
-        return "new_form";
-    }
-
-    @GetMapping("/opretprofil")
+    @GetMapping("/opretbruger")
     public String registrer(Model model){
 
         User user = new User();
@@ -68,7 +62,8 @@ public class EndPoints {
 
     @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
     public String save(@ModelAttribute("user") User user){
-        daoUser.save(user);
+//        System.out.println(user);
+        dao.save(user);
 
         return "redirect:/";
     }

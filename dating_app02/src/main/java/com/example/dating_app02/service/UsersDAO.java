@@ -34,6 +34,8 @@ public class UsersDAO {
     public void save (User user){
         SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
 
+        System.out.println(user);
+
         insertActor.withTableName("app_user").usingColumns(
                 "user_mail"
                 ,   "user_password"
