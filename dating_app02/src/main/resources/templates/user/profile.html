@@ -36,13 +36,13 @@
                     <div class="container pt-5">
                         <div class="row">
                             <div class="col-sm">
-                                <img class="img-thumbnail rounded-circle" data-holder-rendered="true" th:src="@{/images/image_01.jpg}"/>
+                                <img class="img-thumbnail rounded-circle" data-holder-rendered="true" th:src="*{profile_img}"/>
                             </div>
                             <div class="col-sm">
-                                <h4 th:field="*{profile_firstname}"></h4>
+                                <h4 th:text="*{profile_firstname}"></h4>
                                 <h4>År : 28</h4>
-                                <h4>By : Ballerup</h4>
-                                <h4>Interesser : Gaming, Film, Dyr, Rejser</h4>
+                                <h4 >By : Ballerup</h4>
+                                <h4 th:text="*{profile_matchTag}"></h4>
                             </div>
                         </div>
                     </div>
@@ -50,10 +50,7 @@
 <!--       PROFILE DESC     -->
                 <div class="container mt-5">
                     <div class="col-sm-12">
-                        <p>
-                            Om Mig:
-                            Jeg elsker smukke, selvsikre og sexede kvinder, der har det godt med at være feminine.
-                            Du er  dødlækker,  smuk, sund, selvsikker, optimistisk, seksuelt åben, fleksibel, intelligent, ærlig, udadvendt, sjov, god kommunikator (mit liv er en drama fri zone), forstår mænd, kærlig, sexet, glad og meget feminin. Min ideelle kvinde er mellem  xxx og xxx cm høj, slank og i god form med en dejlig krop, langt og lige brunt, eller sort hår, mørke øjne og lækker brun hud. Sundhed, motion og en sund kost er en stor del af hendes liv.
+                        <p th:text="*{profile_desc}">
 
                         </p>
                     </div>
@@ -62,13 +59,13 @@
                         <div class="row">
 
                             <div class="col-sm-4">
-                                <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                                <img class="img-thumbnail" th:src="*{profile_img}"/>
                             </div>
                             <div class="col-sm-4">
-                                <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                                <img class="img-thumbnail" th:src="*{profile_img}"/>
                             </div>
                             <div class="col-sm-4">
-                                <img class="img-thumbnail" th:src="@{/images/image_01.jpg}"/>
+                                <img class="img-thumbnail" th:src="*{profile_img}"/>
                             </div>
                         </div>
                     </div>
@@ -77,13 +74,13 @@
                         <div class="row">
 
                             <div class="col-sm-4">
-                                <img class="img-thumbnail" th:src="@{/static/images/image_01.jpg}"/>
+                                <img class="img-thumbnail" th:src="*{profile_img}"/>
                             </div>
                             <div class="col-sm-4">
-                                <img class="img-thumbnail" th:src="@{/static/images/image_01.jpg}"/>
+                                <img class="img-thumbnail" th:src="*{profile_img}"/>
                             </div>
                             <div class="col-sm-4">
-                                <img class="img-thumbnail" th:src="@{/static/images/image_01.jpg}"/>
+                                <img class="img-thumbnail" th:src="*{profile_img}"/>
                             </div>
                         </div>
                     </div>

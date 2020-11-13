@@ -51,9 +51,9 @@ public class EndPoints {
         return "log/login";
     }
 
-    @GetMapping("/profile/:id")
+    @GetMapping("/profile/{id}")
     public ModelAndView profile(@PathVariable(name = "id") int id){
-        ModelAndView mav = new ModelAndView("user/profile02");
+        ModelAndView mav = new ModelAndView("user/profile");
         Profile profile = daoProfile.get(id);
         mav.addObject("profile", profile);
 
