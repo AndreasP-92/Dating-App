@@ -44,7 +44,12 @@ public class MsgDAO {
     }
 
     public Msg get(int id){
-        return null;
+    String sql ="SELECT * FROM app_messages WHERE messages_id = ?";
+    Object[] args = {id};
+    Msg msg = jdbcTemplate.queryForObject(sql,
+            BeanPropertyRowMapper.newInstance(Msg.class));
+
+        return msg;
     }
 
     public void update(Msg message){
