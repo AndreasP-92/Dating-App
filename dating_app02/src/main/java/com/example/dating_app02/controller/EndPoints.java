@@ -1,11 +1,10 @@
 package com.example.dating_app02.controller;
 
 import com.example.dating_app02.model.User;
+import com.example.dating_app02.service.UsersDAO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class EndPoints {
@@ -47,6 +46,9 @@ public class EndPoints {
         return "user/profile02";
     }
 //    USER ==============================
+
+    private UsersDAO daoUser;
+
     @RequestMapping("/opret")
     public String showNewForm(Model model){
         User user = new User();
@@ -55,22 +57,30 @@ public class EndPoints {
         return "new_form";
     }
 
-    @GetMapping("/opretbruger")
-    public String createUser(Model model){
+    @GetMapping("/opretprofil")
+    public String registrer(Model model){
 
         User user = new User();
         model.addAttribute("user", user);
 
         return "user/createUser";
     }
-//        PROFIL ===========================
 
-    @RequestMapping("/opretprofil")
+    @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
+    public String save(@ModelAttribute("user") User user){
+        daoUser.save(user);
+
+        return "redirect:/";
+    }
+
+//   PROFIL ===========================
+
+@RequestMapping("/opretprofil")
     public String createProfil(Model model) {
         com.example.demo.model.Profile profile = new com.example.demo.model.Profile();
         model.addAttribute("profile",profile);
         return "main/createProfil";
-    }
+}
 //    @GetMapping("/login_success")
 //    public String loginSuccess(){
 //
