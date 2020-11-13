@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Message Manager Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Message Records</h1>
+
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>context</th>
+            <th>userId</th>
+            <th>date</th>
+            <th>actions</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="message : ${listMessage}">
+            <td th:text="${message.messages_id}">id</td>
+            <td th:text="${message.messages_context}">context</td>
+            <td th:text="${message.messages_userId}">userId</td>
+            <td th:text="${message.messages_date}">date</td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
