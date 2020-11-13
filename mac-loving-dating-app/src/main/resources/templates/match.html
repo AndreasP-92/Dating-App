@@ -1,72 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
-<html xmlns:th ="http://www.thymeleaf.org"></html>
+<html xmlns:th = "http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="match.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="match.css" type="text/css" rel="stylesheet">
 
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <title> Match Side </title>
 </head>
-<body>
-<div class="box" align="center">
+<body style="background-color:#2196f3;">
+<div class="">
+    <div class="row">
+        <div class="col-sm-2 p-1" style="background-color:#2196f3;">
+            <div class="brand_logo_container mt-2 ml-4 mb-2">
+                <img  srcset="https://cdn.pixabay.com/photo/2020/04/17/07/52/flower-5053686_1280.png 1.778x" src="https://cdn.pixabay.com/photo/2020/04/17/07/52/flower-5053686_960_720.png" class ="brand_logo" alt="logo">
+            </div>
+            <ul class="nav flex-column pt 5mt-5" align="center" style="width:50%">
+                <li class="nav-item btn-danger mt-2">
+                    <a class="nav-link active" href="#">Søg</a>
+                </li>
+                <li class="nav-item btn-danger mt-2">
+                    <a class="nav-link" href="#">Match</a>
+                </li>
+                <li class="nav-item btn-danger mt-2">
+                    <a class="nav-link" href="#">Beskeder</a>
+                </li>
+                <li class="nav-item btn-danger mt-2">
+                    <a class="nav-link" href="#">Rediger Profil</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-8 pb-5" style="background-color: #ffbdbd;">
+            <!--                Top matches        -->
+            <div class="container">
+                <div class="container m-0 p-0" align="center">
+                    <p class="heading">Dine Top Matches</p>
+                <div class="container pt-5" align="center">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img srcset="https://expertphotography.com/wp-content/uploads/2018/10/cool-profile-picture-natural-light.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" class ="brand_logo" alt="logo" style="width: 230px; height: 275px; margin: 10px;">
+                        </div>
 
-    <div class="container">
-        <form action="/action_page.php">
-            <div class="col-sm" align="center">
-                <img srcset="https://cdn.pixabay.com/photo/2020/04/17/07/52/flower-5053686_1280.png 1.778x" src="https://cdn.pixabay.com/photo/2020/04/17/07/52/flower-5053686_960_720.png" class ="brand_logo" alt="logo">
+                    </div>
+                </div>
             </div>
-            <div class="d-flex justify-content-center mt-3 match_container">
-                <button1 type="button" name="button2" class="btn match_btn" id="butt1">Søg</button1>
-            </div>
-            <div class = "spacer1">
-            </div>
-            <div class="d-flex justify-content-center mt-3 message_container">
-                <button2 type="button" name="button3" class="btn message_btn" id="butt1">Match</button2>
-            </div>
-            <div class = "spacer1">
-            </div>
-            <div class="d-flex justify-content-center mt-3 edit_container">
-                <button3 type="button" name="button4" class="btn edit_btn" id="butt1">Besked</button3>
-            </div>
-            <div class="d-flex justify-content-center mt-3 match_container">
-                <button4 type="button" name="button2" class="btn match_btn" id="butt1">Rediger Profil</button4>
-            </div>
-            <p1 class="heading1">Dit Top Match</p1>
-            <div class = "spacer1">
-            </div>
-            <img srcset="https://expertphotography.com/wp-content/uploads/2018/10/cool-profile-picture-natural-light.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" class ="brand_logo" alt="logo" style="width: 230px; height: 275px; margin: 10px;">
-            <div class = "spacer1">
+                <div class="container mt-5" align="center">
+                    <div class="row w-50"  >
+                        <div class="col-sm" align="center">
+                            <img alt="logo" class="brand_logo" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2019/10/Renee-M.jpg?fit=753%2C1024&amp;ssl=1" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 275px; margin: 0px;">
+                            <p></p>
+                        </div>
+                        <div class="col-sm" align="center">
+                            <img alt="logo" class="brand_logo" src="https://perfectczechwomen.com/wp-content/uploads/2019/04/New-Profile-15-500x580.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 275px; margin: 0px;">
+                        </div>
+                </div>
+                    <div class="container m-0 p-0" align="center">
+                        <p class="heading">Dine Matches</p>
+
+                <!--         Dine Matches    -->
+                <div class="col-sm-12 mt-5">
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <img alt="logo" class="brand_logo" src="https://denverjewishchamber.com/wp-content/uploads/2018/10/business-woman-profile-picture-6-e1539213049252.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 175px; height: 175px; margin: 0px;">
+                        </div>
+                        <div class="col-sm-4">
+                            <img alt="logo" class="brand_logo" src="https://denverjewishchamber.com/wp-content/uploads/2018/10/business-woman-profile-picture-6-e1539213049252.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 175px; height: 175px; margin: 0px;">
+                        </div>
+                        <div class="col-sm-4">
+                            <img alt="logo" class="brand_logo" src="https://denverjewishchamber.com/wp-content/uploads/2018/10/business-woman-profile-picture-6-e1539213049252.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 175px; height: 175px; margin: 0px;">
+                        </div>
+                    </div>
+                </div>
+                <!--         PROFILE IMAGE(s)2    -->
+                <div class="col-sm-12 mt-2">
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <img alt="logo" class="brand_logo" src="https://denverjewishchamber.com/wp-content/uploads/2018/10/business-woman-profile-picture-6-e1539213049252.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 175px; height: 175px; margin: 0px;">
+                        </div>
+                        <div class="col-sm-4">
+                            <img alt="logo" class="brand_logo" src="https://denverjewishchamber.com/wp-content/uploads/2018/10/business-woman-profile-picture-6-e1539213049252.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 175px; height: 175px; margin: 0px;">
+                        </div>
+                        <div class="col-sm-4">
+                            <img alt="logo" class="brand_logo" src="https://denverjewishchamber.com/wp-content/uploads/2018/10/business-woman-profile-picture-6-e1539213049252.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 175px; height: 175px; margin: 0px;">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </form>
-    </div>
+            <div th:replace="footer :: footerFragment"></div>
 
-    <div class="container m-0 p-0">
-        <p class="heading">Dine Matches</p>
-        <div class="container mt-5" align="center">
-            <div class="row w-50"  >
-                <div class="col-sm" align="center">
-                    <img alt="logo" class="brand_logo" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2019/10/Renee-M.jpg?fit=753%2C1024&amp;ssl=1" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 275px; margin: 0px;">
-                    <p></p>
-                </div>
-                <div class="col-sm" align="center">
-                    <img alt="logo" class="brand_logo" src="https://perfectczechwomen.com/wp-content/uploads/2019/04/New-Profile-15-500x580.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 275px; margin: 0px;">
-                </div>
-                <div class="col-sm" align="center">
-                    <img alt="logo" class="brand_logo" src="https://denverjewishchamber.com/wp-content/uploads/2018/10/business-woman-profile-picture-6-e1539213049252.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 275px; margin: 0px;">
-                    <p></p>
-                </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="container" style="background-color: #2196f3;">
+
             </div>
         </div>
 
+
     </div>
 </div>
-<footer>
 
-    <div th:replace="footer :: footerFragment"></div>
-
-</footer>
 </body>
 </html>
