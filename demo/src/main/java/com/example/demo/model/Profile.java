@@ -6,18 +6,20 @@ public class Profile {
     private String profile_lastname;
     private String profile_desc;
     private String profile_img;
-    private String profile_matches;
-    private String profile_userId;
+    private int profile_matches;
     private String profile_matchTag;
 
-    public Profile(String profile_firstname, String profile_lastname, String profile_desc, String profile_img, String profile_matches, String profile_userId, String profile_matchTag) {
+    public Profile(String profile_firstname, String profile_lastname, String profile_desc, String profile_img, int profile_matches, String profile_matchTag) {
         this.profile_firstname = profile_firstname;
         this.profile_lastname = profile_lastname;
         this.profile_desc = profile_desc;
         this.profile_img = profile_img;
         this.profile_matches = profile_matches;
-        this.profile_userId = profile_userId;
         this.profile_matchTag = profile_matchTag;
+    }
+
+    public Profile(){
+
     }
 
     public int getProfile_id() {
@@ -60,20 +62,12 @@ public class Profile {
         this.profile_img = profile_img;
     }
 
-    public String getProfile_matches() {
+    public int getProfile_matches() {
         return profile_matches;
     }
 
-    public void setProfile_matches(String profile_matches) {
+    public void setProfile_matches(int profile_matches) {
         this.profile_matches = profile_matches;
-    }
-
-    public String getProfile_userId() {
-        return profile_userId;
-    }
-
-    public void setProfile_userId(String profile_userId) {
-        this.profile_userId = profile_userId;
     }
 
     public String getProfile_matchTag() {
@@ -93,7 +87,6 @@ public class Profile {
                 ", profile_desc='" + profile_desc + '\'' +
                 ", profile_img='" + profile_img + '\'' +
                 ", profile_matches='" + profile_matches + '\'' +
-                ", profile_userId='" + profile_userId + '\'' +
                 ", profile_matchTag='" + profile_matchTag + '\'' +
                 '}';
     }
