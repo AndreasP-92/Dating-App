@@ -1,5 +1,6 @@
 package com.example.dating_app02.controller;
 
+import com.example.dating_app02.model.Profile;
 import com.example.dating_app02.model.User;
 import com.example.dating_app02.service.UsersDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,7 +73,7 @@ public class EndPoints {
 
 @RequestMapping("/opretprofil")
     public String createProfil(Model model) {
-        com.example.demo.model.Profile profile = new com.example.demo.model.Profile();
+        Profile profile = new Profile();
         model.addAttribute("profile",profile);
         return "main/createProfil";
 }

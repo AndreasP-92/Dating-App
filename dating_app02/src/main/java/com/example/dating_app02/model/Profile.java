@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.dating_app02.model;
 
 public class Profile {
     private int profile_id;
