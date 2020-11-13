@@ -43,7 +43,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/user").hasAnyRole("ADMIN", "USER")
-                .antMatchers("/profile").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/profile").permitAll()
                 .antMatchers("/").permitAll()
                 .and().formLogin()
                     .permitAll()
@@ -70,7 +70,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
                             System.out.println("Login Failure!!!....");
 
-                            httpServletResponse.sendRedirect("/login_error");
+                            httpServletResponse.sendRedirect("/");
                         }
                     })
                 .and().exceptionHandling().accessDeniedPage("/403");

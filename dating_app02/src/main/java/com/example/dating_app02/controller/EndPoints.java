@@ -1,5 +1,6 @@
 package com.example.dating_app02.controller;
 
+import com.example.dating_app02.model.Authorities;
 import com.example.dating_app02.model.Profile;
 import com.example.dating_app02.model.User;
 import com.example.dating_app02.service.UsersDAO;
@@ -50,7 +51,7 @@ public class EndPoints {
 //    USER ==============================
 
     @Autowired
-    private UsersDAO dao;
+    private UsersDAO daoUser;
 
     @GetMapping("/opretbruger")
     public String registrer(Model model){
@@ -64,7 +65,9 @@ public class EndPoints {
     @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
     public String save(@ModelAttribute("user") User user){
 //        System.out.println(user);
-        dao.save(user);
+        Authorities auth = new Authorities(user.getUser_mail(), "ROLE_USER");
+        daoUser.saveUser(user);
+        daoUser.saveAuth(auth);
 
         return "redirect:/";
     }

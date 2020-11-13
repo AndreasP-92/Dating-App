@@ -1,5 +1,6 @@
 package com.example.dating_app02.service;
 
+import com.example.dating_app02.model.Authorities;
 import com.example.dating_app02.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -31,7 +32,7 @@ public class UsersDAO {
         return listUser;
     }
 
-    public void save (User user){
+    public void saveUser (User user){
         SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
 
         System.out.println(user);
@@ -44,6 +45,20 @@ public class UsersDAO {
                 ,   "active"
         );
         BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(user);
+
+        insertActor.execute(param);
+    }
+
+    public void saveAuth (Authorities auth){
+        SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
+
+        System.out.println(auth);
+
+        insertActor.withTableName("authorities").usingColumns(
+                    "usermail"
+                ,   "authority"
+        );
+        BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(auth);
 
         insertActor.execute(param);
     }
