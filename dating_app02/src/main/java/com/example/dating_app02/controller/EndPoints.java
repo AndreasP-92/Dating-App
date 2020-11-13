@@ -1,7 +1,10 @@
 package com.example.dating_app02.controller;
 
+import com.example.dating_app02.model.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -42,6 +45,14 @@ public class EndPoints {
     public String profile(){
 
         return "user/profile02";
+    }
+//    USER ==============================
+    @RequestMapping("/new")
+    public String showNewForm(Model model){
+        User user = new User();
+        model.addAttribute("user", user);
+
+        return "new_form";
     }
 
 //    @GetMapping("/login_success")

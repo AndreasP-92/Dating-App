@@ -1,7 +1,7 @@
-package com.example.demo;
+package com.example.dating_app_meggsage_connect;
 
-import com.example.demo.model.Msg;
-import com.example.demo.service.MessageDAO;
+import com.example.dating_app_meggsage_connect.model.Msg;
+import com.example.dating_app_meggsage_connect.service.MsgDAO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,30 +11,25 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import java.util.List;
 
 @SpringBootTest
-class TobiasDataBcApplicationTests {
-    private MessageDAO dao;
+class DatingAppMeggsageConnectApplicationTests {
 
-
+    private MsgDAO dao;
 
     @BeforeEach
-    void setUp() throws Exception{
+    void setUp() {
         DriverManagerDataSource datasource = new DriverManagerDataSource();
         datasource.setUrl("jdbc:mysql://138.197.186.159:3306/dating_app");
         datasource.setUsername("captain");
         datasource.setPassword("Uxr56vem.captain");
         datasource.setDriverClassName("com.mysql.jdbc.Driver");
 
-        dao = new MessageDAO(new JdbcTemplate(datasource));
+        dao = new MsgDAO(new JdbcTemplate(datasource));
     }
 
     @Test
     void contextLoads() {
-           }
-
-    @Test
-    void testList(){
-        List<Msg> listMessage = dao.list();
-        System.out.println((listMessage));
-
+        List<Msg> listMsg = dao.list();
+        System.out.println(listMsg);
     }
+
 }

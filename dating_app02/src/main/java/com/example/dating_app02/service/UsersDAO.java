@@ -1,6 +1,5 @@
-package com.example.datingAppDataConnect.services;
+package com.example.dating_app02.service;
 
-import com.example.datingAppDataConnect.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -9,7 +8,6 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
-import java.beans.BeanProperty;
 import java.util.List;
 
 @Repository
@@ -20,7 +18,6 @@ public class UsersDAO {
 
 
     public UsersDAO(JdbcTemplate jdbcTemplate) {
-
         this.jdbcTemplate = jdbcTemplate;
     }
 
@@ -37,7 +34,7 @@ public class UsersDAO {
         SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
 
         insertActor.withTableName("app_user").usingColumns(
-                    "user_mail"
+                "user_mail"
                 ,   "user_password"
                 ,   "user_phone"
                 ,   "user_date"

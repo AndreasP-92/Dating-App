@@ -1,22 +1,18 @@
-package com.example.demo.service;
+package com.example.dating_app_meggsage_connect.service;
 
-
-
-import com.example.demo.model.Msg;
+import com.example.dating_app_meggsage_connect.model.Msg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 @Repository
-public class MessageDAO {
-
+public class MsgDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public MessageDAO(JdbcTemplate jdbcTemplate) {
+    public MsgDAO(JdbcTemplate jdbcTemplate) {
 
         this.jdbcTemplate = jdbcTemplate;
     }
