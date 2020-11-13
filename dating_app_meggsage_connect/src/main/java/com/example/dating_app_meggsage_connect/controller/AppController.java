@@ -24,12 +24,4 @@ public class AppController {
         return "index";
     }
 
-    @RequestMapping
-    public String test (Model model){
-        List<Msg> listMsg = dao.list();
-
-        model.addAttribute("listMsg", listMsg);
-
-        return "asd";
-    }
 }

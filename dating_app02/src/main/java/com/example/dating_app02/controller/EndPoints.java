@@ -47,12 +47,21 @@ public class EndPoints {
         return "user/profile02";
     }
 //    USER ==============================
-    @RequestMapping("/new")
+    @RequestMapping("/opret")
     public String showNewForm(Model model){
         User user = new User();
         model.addAttribute("user", user);
 
         return "new_form";
+    }
+
+    @GetMapping("/opretprofil")
+    public String registrer(Model model){
+
+        User user = new User();
+        model.addAttribute("user", user);
+
+        return "user/createUser";
     }
 
 //    @GetMapping("/login_success")

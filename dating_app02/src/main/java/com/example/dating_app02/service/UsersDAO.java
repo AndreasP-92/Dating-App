@@ -1,5 +1,6 @@
 package com.example.dating_app02.service;
 
+import com.example.dating_app02.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
