@@ -1,4 +1,4 @@
-package com.example.dating_app02.service;
+package com.example.dating_app02.repository;
 
 import com.example.dating_app02.model.Profile;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,17 +31,18 @@ public class ProfileDAO {
 
     public void save(Profile profile) {
         SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
-        insertActor.withTableName("app_profile").usingColumns("profile_firstname","profile_lastname", "profile_desc", "profile_img", "profile_matches", "profile_matchTag");
+        insertActor.withTableName("app_profile").usingColumns("profile_firstname","profile_lastname", "profile_desc", "profile_img", "profile_matches", "profile_matchTag", "profile_mail");
 
         BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(profile);
         insertActor.execute(param);
     }
 
-    public Profile get(int Profile_id) {
-        String sql = "SELECT * FROM app_profile WHERE Profile_id = ?";
-        Object[] args = {Profile_id};
-        Profile profile = jdbcTemplate.queryForObject(sql, args, BeanPropertyRowMapper.newInstance(Profile.class));
 
+    public Profile get(String profile_mail) {
+        String sql = "SELECT * FROM app_profile WHERE profile_mail = ?";
+        Object[] args = {profile_mail};
+        Profile profile = jdbcTemplate.queryForObject(sql, args, BeanPropertyRowMapper.newInstance(Profile.class));
+        System.out.println("PROFILE====="+profile);
         return profile;
     }
 

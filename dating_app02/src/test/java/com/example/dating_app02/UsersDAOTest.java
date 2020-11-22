@@ -1,7 +1,7 @@
 package com.example.dating_app02;
 
 import com.example.dating_app02.model.User;
-import com.example.dating_app02.service.UsersDAO;
+import com.example.dating_app02.repository.UsersDAO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.core.JdbcTemplate;

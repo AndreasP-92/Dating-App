@@ -1,6 +1,6 @@
 package com.example.dating_app02.service;
 
-import com.example.dating_app02.model.User;
+import com.example.dating_app02.repository.UsersDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -45,9 +45,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/admin").permitAll()
                 .antMatchers("/user").hasAnyRole("ADMIN", "USER")
-                .antMatchers("/profile").permitAll()
+                .antMatchers("/profile/{profile_mail}").hasAnyRole("ADMIN", "USER")
                 .antMatchers("/").permitAll()
                 .and().formLogin()
                     .permitAll()
@@ -65,7 +65,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                             String name = authentication.getName();
                             System.out.println("Logged in user: " + name);
 
-                            int id = usersDAO.getUser(name).getUser_id();
+                            String id = usersDAO.getUser(name).getUser_mail();
 
                             System.out.println(usersDAO.getUser(name).getUser_id());
 

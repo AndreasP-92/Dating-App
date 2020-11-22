@@ -8,18 +8,28 @@ public class Profile {
     private String profile_img;
     private int profile_matches;
     private String profile_matchTag;
+    private String profile_mail;
 
-    public Profile(String profile_firstname, String profile_lastname, String profile_desc, String profile_img, int profile_matches, String profile_matchTag) {
+    public Profile(String profile_firstname, String profile_lastname, String profile_desc, String profile_img, int profile_matches, String profile_matchTag, String profile_mail) {
         this.profile_firstname = profile_firstname;
         this.profile_lastname = profile_lastname;
         this.profile_desc = profile_desc;
         this.profile_img = profile_img;
         this.profile_matches = profile_matches;
         this.profile_matchTag = profile_matchTag;
+        this.profile_mail = profile_mail;
     }
 
     public Profile(){
 
+    }
+
+    public String getProfile_mail() {
+        return profile_mail;
+    }
+
+    public void setProfile_mail(String profile_mail) {
+        this.profile_mail = profile_mail;
     }
 
     public int getProfile_id() {
@@ -86,8 +96,9 @@ public class Profile {
                 ", profile_lastname='" + profile_lastname + '\'' +
                 ", profile_desc='" + profile_desc + '\'' +
                 ", profile_img='" + profile_img + '\'' +
-                ", profile_matches='" + profile_matches + '\'' +
+                ", profile_matches=" + profile_matches +
                 ", profile_matchTag='" + profile_matchTag + '\'' +
+                ", profile_mail='" + profile_mail + '\'' +
                 '}';
     }
 }

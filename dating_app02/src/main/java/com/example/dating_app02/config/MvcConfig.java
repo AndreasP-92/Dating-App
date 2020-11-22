@@ -1,4 +1,4 @@
-package com.example.dating_app02.service;
+package com.example.dating_app02.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

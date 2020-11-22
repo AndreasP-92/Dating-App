@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
+<!--https://codepen.io/Varo/pen/YPmwpQ-->
+<head>
+    <meta charset="UTF-8">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="/adminChat.css" type="text/css" rel="stylesheet">
+
+
+    <title>Admin Page</title>
+</head>
+<body>
+<div class="container">
+    <div class="menu">
+        <a href="#" class="back"><i class="fa fa-angle-left"></i> <img src="https://i.imgur.com/G4EjwqQ.jpg" draggable="false"/></a>
+        <div class="name">Random chat</div>
+        <div class="members"><b>You</b>, Marga, Charo & Brotons</div>
+    </div>
+    <ol th:each="conversation : ${conversation}" class="chat">
+        <li class="other">
+            <div class="msg">
+                <div class="user"><p th:text="${message.messages_usermail}"></p></div>
+                <div>
+                    <p th:text="*{message.messages_context}"></p>
+                </div>
+                <time th:text="${message.messages_date}"></time>
+            </div>
+    </ol>
+    <div class="typezone">
+        <form th:action="@{/admin/save/chat}" th:object="${message}" method="post">
+<!--            <input style="display: none;" th:field="*{}" type="text" placeholder="test">-->
+            <input style="display: none;" th:field="*{messages_title}" type="text" placeholder="test">
+            <textarea th:field="*{messages_context}" type="text" placeholder="Say something"></textarea>
+            <input type="submit" class="send" value=""/>
+        </form>
+        <div class="emojis"></div></div>
+</div>
+</body>
+</html>

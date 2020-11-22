@@ -3,8 +3,8 @@ package com.example.dating_app02.controller;
 import com.example.dating_app02.model.Authorities;
 import com.example.dating_app02.model.Profile;
 import com.example.dating_app02.model.User;
-import com.example.dating_app02.service.ProfileDAO;
-import com.example.dating_app02.service.UsersDAO;
+import com.example.dating_app02.repository.ProfileDAO;
+import com.example.dating_app02.repository.UsersDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,35 +13,47 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class EndPoints {
-    //@AUTOWIRED =========================
+    //DATA ACCESS OBJECTS ====================
     @Autowired
     private UsersDAO daoUser;
     @Autowired
     private ProfileDAO daoProfile;
+
+//    MAIN ====================================
 
     @GetMapping("/")
     public String home(){
 
         return "main/index";
     }
+    @GetMapping("/kontakt")
+    public String Kontakt(){
 
-    @GetMapping("/profile/{id}")
-    public ModelAndView profile(@PathVariable(name = "id") int id){
+        return "main/kontakt";
+    }
+
+    @GetMapping("/privatliv")
+    public String privatliv(){
+
+        return "main/privacy";
+    }
+
+    @GetMapping("/faq")
+    public String faq(){
+
+        return "main/faq";
+    }
+
+    @GetMapping("/profile/{profile_mail}")
+    public ModelAndView profile(@PathVariable(name = "profile_mail") String profile_mail){
         ModelAndView mav = new ModelAndView("user/profile");
-        Profile profile = daoProfile.get(id);
+        Profile profile = daoProfile.get(profile_mail);
         mav.addObject("profile", profile);
 
         return mav;
     }
 
 //    LOGIN =======================================
-
-    @GetMapping("/admin")
-    @ResponseBody
-    public String admin(){
-
-        return "admin/admin";
-    }
 
     @GetMapping("/403")
     public String error(){
@@ -73,11 +85,11 @@ public class EndPoints {
 
     @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
     public String save(@ModelAttribute("user") User user){
-//        System.out.println(user);
         Authorities auth = new Authorities(user.getUser_mail(), "ROLE_USER");
+        Profile profile = new Profile("Tobias","Cho","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","/images/image_01.jpg",0,"Gaming, Rejser, Andet",user.getUser_mail());
         daoUser.saveUser(user);
         daoUser.saveAuth(auth);
-
+        daoProfile.save(profile);
         return "redirect:/";
     }
 
@@ -97,6 +109,13 @@ public class EndPoints {
 
         daoProfile.save(profile);
 
+
+        return "redirect:/";
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String update(@ModelAttribute("user") User user){
+        daoUser.update(user);
 
         return "redirect:/";
     }

@@ -1,4 +1,4 @@
-package com.example.dating_app02.service;
+package com.example.dating_app02.repository;
 
 import com.example.dating_app02.model.Authorities;
 import com.example.dating_app02.model.User;
@@ -23,6 +23,7 @@ public class UsersDAO {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+// GET ALL USERS
     public List<User> list(){
         String sql = "SELECT * FROM app_user";
 
@@ -32,6 +33,7 @@ public class UsersDAO {
         return listUser;
     }
 
+//    GET USER WITH MAIL
     public User getUser(String user_mail){
         String sql = "SELECT * FROM app_user WHERE user_mail = ?";
         Object[] args = {user_mail};
@@ -41,10 +43,9 @@ public class UsersDAO {
         return user;
     }
 
+// SAVE USER
     public void saveUser (User user){
         SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
-
-        System.out.println(user);
 
         insertActor.withTableName("app_user").usingColumns(
                 "user_mail"
@@ -59,6 +60,7 @@ public class UsersDAO {
         insertActor.execute(param);
     }
 
+// SAVE ROLE
     public void saveAuth (Authorities auth){
         SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
 
@@ -73,6 +75,7 @@ public class UsersDAO {
         insertActor.execute(param);
     }
 
+//
     public User get(int id){
         String sql = "SELECT * FROM app_user WHERE user_id = ?";
         Object[] args = {id};
@@ -82,6 +85,7 @@ public class UsersDAO {
         return user;
     }
 
+//    UPDATE USER
     public void update(User user){
 //        String sql =
 //                "UPDATE user_app SET " +
@@ -91,9 +95,9 @@ public class UsersDAO {
 //                "user_date = : user_date, " +
 //                "active = : active, " +
 //                "WHERE user_id = : user_id";
-        String sql ="UPDATE app_user SET user_password = :user_password, user_phone = :user_phone, user_date = :user_date, active = :active user_enabled = :user_enabled WHERE user_id = :user_id";
+        String sql ="UPDATE app_user SET user_password = :user_password, user_phone = :user_phone, user_date = :user_date, active = :active WHERE user_id = :user_id";
 
-//        System.out.println(user);
+        System.out.println(user);
 //        System.out.println("SQL===="+sql);
         BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(user);
         NamedParameterJdbcTemplate template = new NamedParameterJdbcTemplate(jdbcTemplate);
@@ -103,9 +107,10 @@ public class UsersDAO {
         template.update(sql, param);
     }
 
-    public void delete(int id){
-        String sql = "DELETE FROM app_user WHERE user_id = ?";
-        jdbcTemplate.update(sql, id);
+    public void delete(String user_mail){
+        String sql = "DELETE app_user FROM app_user LEFT JOIN authorities ON app_user.user_mail = authorities.usermail WHERE user_mail = ?";
+
+        jdbcTemplate.update(sql, user_mail);
 
     }
 }

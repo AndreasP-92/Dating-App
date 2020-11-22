@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th ="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="kontakt.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Title</title>
+</head>
+<body>
+<div class="box" align="center">
+
+    <div class="container m-0 p-0">
+        <p class="heading">Kontakt format</p>
+        <div class="container mt-5" align="center">
+            <div class="row w-50"  >
+                <div class="col-sm" align="center">
+                    <img alt="logo" class="brand_logo" src="https://i.pinimg.com/originals/d2/fb/e1/d2fbe10eac4b4ef6a2340e50a2c6810f.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;">
+                    <p>Kontakt Os</p>
+                </div>
+                <div class="col-sm" align="center">
+                    <img srcset="https://cdn.pixabay.com/photo/2020/04/17/07/52/flower-5053686_1280.png 1.778x" src="https://cdn.pixabay.com/photo/2020/04/17/07/52/flower-5053686_960_720.png" class ="brand_logo" alt="logo">
+                </div>
+                <div class="col-sm" align="center">
+                    <img alt="logo" class="brand_logo" src="https://www.thensomehow.com/wp-content/uploads/2019/02/email-icon.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;">
+                    <p>Skriv til os, hvis du oplever problemer med at logge ind</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <form action="">
+                <div class="kontakt">
+                    <label for="fname">Fornavn:</label>
+                    <input type="text" id="fname" name="fornavn" placeholder="Dit fornavn">
+
+                    <label for="lname">Efternavn:</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Dit efternavn">
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Din e-mail">
+
+                    <label for="phone">Telefonnummer:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Dit telefonnummer" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <br>
+                    <br>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                    <input type="button" disabled value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
