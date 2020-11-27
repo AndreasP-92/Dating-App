@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37fd1c1d-ecb3-44ff-8bff-df03d50e8baf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dating_app02/src/main/java/com/example/dating_app02/controller/EndPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/dating_app02/src/main/java/com/example/dating_app02/controller/EndPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dating_app02/src/test/java/com/example/dating_app02/ProfileDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dating_app02/src/test/java/com/example/dating_app02/ProfileDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2020_22_04_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2020_22_04__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,14 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <module name="Dating-App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,6 +65,8 @@
       <workItem from="1605125401052" duration="44000" />
       <workItem from="1605128653001" duration="153000" />
       <workItem from="1605266693441" duration="11000" />
+      <workItem from="1606488059907" duration="35000" />
+      <workItem from="1606488158438" duration="8000" />
     </task>
     <servers />
   </component>
@@ -75,10 +86,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604849279698">
+    <state x="227" y="93" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606488079911">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="227" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1604849279698" />
+    <state x="227" y="93" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1606488079911" />
     <state x="502" y="228" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604849278610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
